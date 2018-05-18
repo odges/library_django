@@ -33,7 +33,7 @@ class book(models.Model):
 class BookInstance(models.Model):
 	"""docstring for BookInstance"""
 	id = models.UUIDField(primary_key=True, default=uuid.uuid4, help_text='Undique id')
-	book = models.ForeignKey('Book',on_delete=models.SET_NULL, null=True)
+	book = models.ForeignKey('Book',on_delete=models.SET_NULL, null=True)	
 	due_back = models.DateField(null=True, blank = True)
 
 	LOAN_STATUS = (
